@@ -1,38 +1,68 @@
 import { motion } from 'framer-motion'
 
 export default function Skills() {
+
+  const getSkillIntensity = (level) => {
+    if (level >= 90) return 'var(--skill-expert)'
+    if (level >= 80) return 'var(--skill-advanced)'
+    if (level >= 70) return 'var(--skill-intermediate)'
+    if (level >= 60) return 'var(--skill-developing)'
+    return 'var(--skill-beginner)'
+  }
+
   const skillCategories = [
     {
       title: 'Frontend',
       skills: [
         { name: 'React', level: 90 },
         { name: 'Next.js', level: 85 },
-        { name: 'TypeScript', level: 80 },
+        { name: 'Gradio', level: 80 },
         { name: 'JavaScript', level: 95 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'Tailwind CSS', level: 85 }
+        { name: 'HTML5/CSS3', level: 100 },
+        { name: 'Tailwind CSS', level: 85 },
+        { name: 'Framer Motion', level: 80 },
+        { name: 'Redux', level: 60 }
       ]
     },
     {
       title: 'Backend',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
+        { name: 'Node.js', level: 75 },
+        { name: 'Express.js', level: 60 },
         { name: 'MongoDB', level: 75 },
-        { name: 'PostgreSQL', level: 70 },
-        { name: 'GraphQL', level: 65 },
-        { name: 'REST APIs', level: 90 }
+        { name: 'PostgreSQL', level: 60 },
+        { name: 'GraphQL', level: 45 },
+        { name: 'REST APIs', level: 40 },
+        { name: 'Django', level: 50 },
+        { name: 'Prisma', level: 70 }
+      ]
+    },
+      {
+      title: 'AI & More',
+      skills: [
+        { name: 'Python', level: 70 },
+        { name: 'Pytorch', level: 60 },
+        { name: 'Gradio', level: 50 },
+        { name: 'C++', level: 60 },
+        { name: 'GraphQL', level: 45 },
+        { name: 'REST APIs', level: 40 },
+        { name: 'LangChain', level: 50 },
+        { name: 'Transformers', level: 60 }
+
       ]
     },
     {
       title: 'Tools & Others',
       skills: [
         { name: 'Git', level: 90 },
+        { name: 'Github Actions', level: 80 },
         { name: 'Docker', level: 70 },
         { name: 'AWS', level: 65 },
-        { name: 'Figma', level: 80 },
-        { name: 'Photoshop', level: 75 },
+        { name: 'Notion', level: 90 },
+        { name: 'Figma', level: 90 },
+        { name: 'Photoshop', level: 90 },
         { name: 'Linux', level: 75 }
+
       ]
     }
   ]
@@ -101,6 +131,7 @@ export default function Skills() {
                       <div className="skill-bar">
                         <motion.div
                           className="skill-progress"
+                          style={{ background: getSkillIntensity(skill.level) }}
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
                           transition={{ 

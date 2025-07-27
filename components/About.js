@@ -89,8 +89,17 @@ export default function About() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="image-placeholder">
-                    <div className="avatar">SR</div>
+                  <img 
+                    src="/profile.jpg" 
+                    alt="Sanidhya Ravi Profile" 
+                    className="profile-img"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="image-placeholder" style={{ display: 'none' }}>
+                    <Code size={40} />
                   </div>
                 </motion.div>
                 <div className="image-decoration">

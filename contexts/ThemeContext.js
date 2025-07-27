@@ -40,6 +40,14 @@ export const ThemeProvider = ({ children }) => {
       root.style.setProperty('--shadow-lg', '0 20px 25px -5px rgba(0, 0, 0, 0.6)')
       root.style.setProperty('--gradient-primary', 'linear-gradient(135deg, #000000, #333333)')
       root.style.setProperty('--gradient-accent', 'linear-gradient(135deg, #ffffff, #cccccc)')
+      // Skill level colors for dark theme
+      root.style.setProperty('--skill-expert', '#ffffff')
+      root.style.setProperty('--skill-advanced', '#e5e5e5')
+      root.style.setProperty('--skill-intermediate', '#cccccc')
+      root.style.setProperty('--skill-developing', '#b3b3b3')
+      root.style.setProperty('--skill-beginner', '#999999')
+      // Navbar scrolled background for dark theme
+      root.style.setProperty('--navbar-scrolled-bg', 'rgba(0, 0, 0, 0.95)')
       localStorage.setItem('theme', 'dark')
     } else {
       // Light theme (inverted colors)
@@ -56,6 +64,14 @@ export const ThemeProvider = ({ children }) => {
       root.style.setProperty('--shadow-lg', '0 20px 25px -5px rgba(0, 0, 0, 0.15)')
       root.style.setProperty('--gradient-primary', 'linear-gradient(135deg, #ffffff, #f8f9fa)')
       root.style.setProperty('--gradient-accent', 'linear-gradient(135deg, #000000, #333333)')
+      // Skill level colors for light theme
+      root.style.setProperty('--skill-expert', '#0e0e0eff')
+      root.style.setProperty('--skill-advanced', '#161616ff')
+      root.style.setProperty('--skill-intermediate', '#242424ff')
+      root.style.setProperty('--skill-developing', '#1f1f1fff')
+      root.style.setProperty('--skill-beginner', '#303030ff')
+      // Navbar scrolled background for light theme
+      root.style.setProperty('--navbar-scrolled-bg', 'rgba(255, 255, 255, 0.95)')
       localStorage.setItem('theme', 'light')
     }
   }, [isDarkMode])

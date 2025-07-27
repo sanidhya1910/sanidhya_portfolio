@@ -6,63 +6,63 @@ export default function Projects() {
     {
       id: 1,
       title: 'Sproutify',
-      description: 'A full-stack e-commerce solution built with Next.js, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Next.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+      description: 'A comprehensive web application for organizing and managing beach cleanup events, built with Next.js, Prisma, and PostgreSQL.',
+      image: '/sproutify.jpg',
+      technologies: ['Next.js', 'MongoDB', 'Framer-Motion', 'Tailwind CSS'],
       github: 'https://github.com/sanidhya1910/sproutify',
       demo: 'https://sproutify-wine.vercel.app',
       featured: true
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Express.js', 'Socket.io', 'PostgreSQL', 'Material-UI'],
-      github: 'https://github.com',
+      title: 'Multiline TrOCR',
+      description: 'AI tool to automatically transcribe and translate handwritten text from images, leveraging advanced OCR and translation models.',
+      image: '/trocr.jpg',
+      technologies: ['Python', 'Gradio', 'Hugging Face', 'PyTorch', 'Transformers'],
+      github: 'https://github.com/sanidhya1910/multiline_TrOCR',
       demo: 'https://demo.com',
       featured: true
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard that displays current weather conditions and forecasts for multiple cities with beautiful visualizations.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Chart.js', 'OpenWeather API', 'CSS3'],
-      github: 'https://github.com',
+      title: 'Talk to Me_ta',
+      description: 'A conversational voice assistant built using Meta ASR, TTS, Gradio, and optionally accelerated by FlashAttention 2.',
+      image: '/talk-to-me-ta.jpg',
+      technologies: ['Python', 'Gradio', 'Hugging Face', 'PyTorch', 'Transformers'],
+      github: 'https://github.com/sanidhya1910/Talk-To-Me-ta-',
       demo: 'https://demo.com',
       featured: true
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
-      description: 'An analytics dashboard for social media performance tracking with data visualization and reporting capabilities.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Vue.js', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
-      github: 'https://github.com',
+      title: 'Dynamic Island for Windows',
+      description: 'An enhanced iOS-style Dynamic Island widget for Windows with improved UI and additional features.',
+      image: '/dynamic-island-windows.jpg',
+      technologies: ['React', 'Electron.js', 'CSS3', 'Windows API'],
+      github: 'https://github.com/sanidhya1910/dynamic_island',
       demo: 'https://demo.com',
       featured: true
     },
     {
       id: 5,
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website with smooth animations and optimized performance.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Next.js', 'Framer Motion', 'CSS3', 'Vercel'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
+      title: 'PLantshopia',
+      description: 'An e-commerce platform for buying and selling plants, featuring a user-friendly interface and robust backend.',
+      image: '/plantshopia.jpg',
+      technologies: ['React', 'Javascript', 'CSS'],
+      github: 'https://github.com/sanidhya1910/plantshopia',
+      demo: 'https://sanidhya1910.github.io/plantshopia/',
       featured: true
     },
-    {
-      id: 6,
-      title: 'Blog Platform',
-      description: 'A full-featured blog platform with markdown support, comments system, and SEO optimization.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Gatsby', 'GraphQL', 'Contentful', 'Netlify'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      featured: true
-    }
+    // {
+    //   id: 6,
+    //   title: 'Blog Platform',
+    //   description: 'A full-featured blog platform with markdown support, comments system, and SEO optimization.',
+    //   image: '/api/placeholder/400/250',
+    //   technologies: ['Gatsby', 'GraphQL', 'Contentful', 'Netlify'],
+    //   github: 'https://github.com',
+    //   demo: 'https://demo.com',
+    //   featured: true
+    // }
   ]
 
   const containerVariants = {
@@ -92,7 +92,16 @@ export default function Projects() {
       transition={{ type: "spring", stiffness: 300 }}
     >
       <div className="project-image">
-        <div className="image-placeholder">
+        <img 
+          src={project.image} 
+          alt={project.title}
+          className="project-img"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.nextElementSibling.style.display = 'flex';
+          }}
+        />
+        <div className="image-placeholder" style={{ display: 'none' }}>
           <Eye size={40} />
         </div>
         <div className="project-overlay">
