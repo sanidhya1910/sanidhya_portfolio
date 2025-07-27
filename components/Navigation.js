@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../contexts/ThemeContext'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { isDarkMode, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,7 @@ export default function Navigation() {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Certificates', href: '#certificates' },
     { name: 'Contact', href: '#contact' }
   ]
 
@@ -61,16 +64,41 @@ export default function Navigation() {
               {item.name}
             </motion.a>
           ))}
+          
+          {/* Theme Toggle Button */}
+          <motion.button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: navItems.length * 0.1 }}
+          >
+            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </motion.button>
         </div>
 
         {/* Mobile Menu Button */}
-        <motion.button
-          className="mobile-menu-btn"
-          onClick={() => setIsOpen(!isOpen)}
-          whileTap={{ scale: 0.95 }}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </motion.button>
+        <div className="mobile-controls">
+          {/* Theme Toggle Button for Mobile */}
+          <motion.button
+            className="theme-toggle mobile"
+            onClick={toggleTheme}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </motion.button>
+          
+          <motion.button
+            className="mobile-menu-btn"
+            onClick={() => setIsOpen(!isOpen)}
+            whileTap={{ scale: 0.95 }}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </motion.button>
+        </div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>

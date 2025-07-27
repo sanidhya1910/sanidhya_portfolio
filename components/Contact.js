@@ -34,14 +34,14 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'sanidhya@example.com',
-      href: 'mailto:sanidhya@example.com'
+      value: 'ravisanidhya@gmail.com',
+      href: 'mailto:ravisanidhya@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 12345 67890',
-      href: 'tel:+911234567890'
+      value: '+91 6392173757',
+      href: 'tel:+916392173757'
     },
     {
       icon: MapPin,
@@ -52,9 +52,9 @@ export default function Contact() {
   ]
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' }
+    { icon: Github, href: 'https://github.com/sanidhya1910', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/sanidhya19', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/sanidhya1910', label: 'Twitter' }
   ]
 
   const containerVariants = {

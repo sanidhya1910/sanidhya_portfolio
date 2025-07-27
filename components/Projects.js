@@ -5,12 +5,12 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Sproutify',
       description: 'A full-stack e-commerce solution built with Next.js, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
       image: '/api/placeholder/400/250',
-      technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
+      technologies: ['Next.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+      github: 'https://github.com/sanidhya1910/sproutify',
+      demo: 'https://sproutify-wine.vercel.app',
       featured: true
     },
     {
@@ -31,7 +31,7 @@ export default function Projects() {
       technologies: ['React', 'Chart.js', 'OpenWeather API', 'CSS3'],
       github: 'https://github.com',
       demo: 'https://demo.com',
-      featured: false
+      featured: true
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export default function Projects() {
       technologies: ['Vue.js', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
       github: 'https://github.com',
       demo: 'https://demo.com',
-      featured: false
+      featured: true
     },
     {
       id: 5,
@@ -51,7 +51,7 @@ export default function Projects() {
       technologies: ['Next.js', 'Framer Motion', 'CSS3', 'Vercel'],
       github: 'https://github.com',
       demo: 'https://demo.com',
-      featured: false
+      featured: true
     },
     {
       id: 6,
@@ -61,7 +61,7 @@ export default function Projects() {
       technologies: ['Gatsby', 'GraphQL', 'Contentful', 'Netlify'],
       github: 'https://github.com',
       demo: 'https://demo.com',
-      featured: false
+      featured: true
     }
   ]
 
