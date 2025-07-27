@@ -22,10 +22,10 @@ export default function About() {
   }
 
   const stats = [
-    { icon: Code, label: 'Projects Completed', value: '50+' },
-    { icon: Coffee, label: 'Cups of Coffee', value: '1000+' },
-    { icon: Heart, label: 'Happy Clients', value: '30+' },
-    { icon: Zap, label: 'Years Experience', value: '3+' }
+    { icon: Code, label: 'Projects Completed', value: '15+' },
+    { icon: Coffee, label: 'Cups of Coffee', value: '400+' },
+    { icon: Heart, label: 'Happy Clients', value: '10+' },
+    { icon: Zap, label: 'Years Experience', value: '1+' }
   ]
 
   return (
@@ -48,7 +48,7 @@ export default function About() {
               <div className="text-content">
                 <p>
                   I'm a passionate Full Stack Developer with a love for creating beautiful, 
-                  functional web experiences. My journey in web development started 3 years ago, 
+                  functional web experiences. My journey in web development started 1 year ago, 
                   and I've been constantly learning and evolving ever since.
                 </p>
                 <p>
@@ -57,9 +57,8 @@ export default function About() {
                   that are both intuitive and delightful.
                 </p>
                 <p>
-                  When I'm not coding, you can find me exploring new technologies, 
-                  contributing to open-source projects, or enjoying a good cup of coffee 
-                  while reading tech blogs.
+                  When I'm not coding, you can find me tinkering with AI projects and tools, 
+                  contributing to open-source projects, or watching the occasional isekai.
                 </p>
               </div>
 
@@ -70,15 +69,15 @@ export default function About() {
                 </div>
                 <div className="info-item">
                   <span className="label">Location:</span>
-                  <span className="value">India</span>
+                  <span className="value">Mumbai, India</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Email:</span>
-                  <span className="value">sanidhya@example.com</span>
+                  <span className="value">ravisanidhya@gmail.com</span>
                 </div>
                 <div className="info-item">
                   <span className="label">Experience:</span>
-                  <span className="value">3+ Years</span>
+                  <span className="value">1+ Years</span>
                 </div>
               </motion.div>
             </motion.div>

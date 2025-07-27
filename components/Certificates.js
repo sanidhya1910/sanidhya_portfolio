@@ -5,10 +5,10 @@ export default function Certificates() {
   const certificates = [
     {
       id: 1,
-      title: 'Full Stack Web Development',
-      issuer: 'freeCodeCamp',
-      description: 'Comprehensive certification covering HTML, CSS, JavaScript, React, Node.js, and database management.',
-      date: 'March 2024',
+      title: 'IBM Full Stack Software Developer Certificate',
+      issuer: 'IBM (Coursera)',
+      description: 'Technologies covered includes Cloud GitHub, Node.js, React, Docker, Kubernetes, Django ORM, Bootstrap, Microservices, Serverless computing, and more.',
+      date: 'June 2025',
       status: 'valid',
       credentialId: 'FCC-12345',
       verifyUrl: 'https://freecodecamp.org/verify',
@@ -16,10 +16,10 @@ export default function Certificates() {
     },
     {
       id: 2,
-      title: 'React Developer Certification',
-      issuer: 'Meta (Facebook)',
-      description: 'Advanced React concepts including hooks, context, state management, and performance optimization.',
-      date: 'January 2024',
+      title: 'AWS Fundamentals: Building Serverless Applications',
+      issuer: 'AWS (Coursera)',
+      description: 'Understanding of core AWS services, key AWS security concepts, migrating from on-premises to AWS, and basics of building serverless applications with AWS.',
+      date: 'July 2025',
       status: 'valid',
       credentialId: 'META-67890',
       verifyUrl: 'https://coursera.org/verify',
@@ -27,10 +27,10 @@ export default function Certificates() {
     },
     {
       id: 3,
-      title: 'AWS Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      description: 'Foundational understanding of AWS cloud services, architecture, and best practices.',
-      date: 'November 2023',
+      title: 'AWS Cloud Solutions Architect Certification',
+      issuer: 'AWS (Coursera)',
+      description: 'Covers Amazon API Gateway, AWS Lambda, Amazon SQS, Amazon DynamoDB, and Amazon SNS to build a serverless web backend.',
+      date: 'July 2025',
       status: 'valid',
       credentialId: 'AWS-CLF-001',
       verifyUrl: 'https://aws.amazon.com/verification',
@@ -38,9 +38,9 @@ export default function Certificates() {
     },
     {
       id: 4,
-      title: 'Google UX Design Certificate',
-      issuer: 'Google',
-      description: 'User experience design fundamentals, wireframing, prototyping, and user research methodologies.',
+      title: 'Generative AI Engineering with LLMs Specialization',
+      issuer: 'IBM (Coursera)',
+      description: 'Covers the fundamentals of generative AI, including large language models (LLMs), prompt engineering, and ethical considerations.',
       date: 'September 2023',
       status: 'valid',
       credentialId: 'GOOGLE-UX-456',
@@ -58,17 +58,17 @@ export default function Certificates() {
       verifyUrl: 'https://university.mongodb.com/verify',
       downloadUrl: '#'
     },
-    {
-      id: 6,
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      description: 'Advanced JavaScript concepts, ES6+, algorithms, data structures, and problem-solving techniques.',
-      date: 'May 2023',
-      status: 'valid',
-      credentialId: 'FCC-JS-123',
-      verifyUrl: 'https://freecodecamp.org/verify',
-      downloadUrl: '#'
-    }
+    // {
+    //   id: 6,
+    //   title: 'JavaScript Algorithms and Data Structures',
+    //   issuer: 'freeCodeCamp',
+    //   description: 'Advanced JavaScript concepts, ES6+, algorithms, data structures, and problem-solving techniques.',
+    //   date: 'May 2023',
+    //   status: 'valid',
+    //   credentialId: 'FCC-JS-123',
+    //   verifyUrl: 'https://freecodecamp.org/verify',
+    //   downloadUrl: '#'
+    // }
   ]
 
   const containerVariants = {

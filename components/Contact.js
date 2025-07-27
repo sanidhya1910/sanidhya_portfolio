@@ -46,7 +46,7 @@ export default function Contact() {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'India',
+      value: 'Mumbai, India',
       href: '#'
     }
   ]

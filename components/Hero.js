@@ -87,7 +87,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              Full Stack Developer & UI/UX Designer
+              Full Stack Developer with a Passion for AI
             </motion.span>
           </motion.div>
 
@@ -121,7 +121,7 @@ export default function Hero() {
 
           <motion.div className="social-links" variants={itemVariants}>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/sanidhya1910"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -130,7 +130,7 @@ export default function Hero() {
               <Github size={24} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/sanidhya19"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -139,7 +139,7 @@ export default function Hero() {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href="mailto:sanidhya@example.com"
+              href="mailto:ravisanidhya@gmail.com"
               className="social-link"
               whileHover={{ y: -3 }}
             >
