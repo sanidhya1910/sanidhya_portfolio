@@ -185,7 +185,7 @@ export default function Certificates() {
           <motion.div className="certificates-cta" variants={itemVariants}>
             <p>Continuously learning and earning new certifications</p>
             <motion.a
-              href="https://linkedin.com/in/sanidhya"
+              href="https://linkedin.com/in/sanidhya19"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"

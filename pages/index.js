@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sanidhya Ravi - Portfolio</title>
-        <meta name="description" content="Full Stack Developer & UI/UX Designer" />
+        <meta name="description" content="Full Stack Developer with a passion for AI" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

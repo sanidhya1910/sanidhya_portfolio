@@ -45,7 +45,7 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: 'PLantshopia',
+      title: 'Plantshopia',
       description: 'An e-commerce platform for buying and selling plants, featuring a user-friendly interface and robust backend.',
       image: '/plantshopia.jpg',
       technologies: ['React', 'Javascript', 'CSS'],
