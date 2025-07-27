@@ -1,63 +1,77 @@
-# Next + Netlify Starter
+# 🚀 Sanidhya Ravi - Portfolio Website
+
+A modern, responsive portfolio website built with Next.js 15 and featuring beautiful animations, smooth transitions, and a professional design. This portfolio showcases my skills as a Full Stack Developer & UI/UX Designer.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
 
-This is a [Next.js](https://nextjs.org/) v15 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
+## 🛠️ Technologies Used
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. With Netlify, you'll have access to features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing on deploy automatically.
+- **Frontend**: Next.js 15, React 18
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Styling**: Custom CSS3 with CSS Variables
+- **Fonts**: Inter (Google Fonts)
+- **Deployment**: Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+## 🚀 Getting Started
 
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
+### Prerequisites
 
-## Table of Contents:
+- Node.js 18+ 
+- npm or yarn
 
-- [Getting Started](#getting-started)
-- [Installation options](#installation-options)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
+## 📦 Project Structure
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+sanidhya_portfolio/
+├── components/           # Reusable UI components
+│   ├── Navigation.js    # Fixed navigation with smooth scroll
+│   ├── Hero.js          # Hero section with animations
+│   ├── About.js         # About section with stats
+│   ├── Skills.js        # Skills with progress bars
+│   ├── Projects.js      # Project showcase
+│   ├── Contact.js       # Contact form and info
+│   ├── Header.js        # Legacy header component
+│   └── Footer.js        # Legacy footer component
+├── pages/               # Next.js pages
+│   ├── _app.js         # App configuration
+│   └── index.js        # Main portfolio page
+├── styles/             # Styling
+│   └── globals.css     # Global styles and animations
+├── public/             # Static assets
+└── package.json        # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Colors & Theme
+The design uses CSS custom properties for easy theming:
+```css
+:root {
+  --primary-color: #6366f1;     /* Primary brand color */
+  --secondary-color: #ec4899;   /* Secondary accent color */
+  --accent-color: #06b6d4;      /* Additional accent */
+  /* ... more variables */
+}
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 📄 License
 
-### Installation options
+This project is open source and available under the [MIT License](LICENSE).
 
-**Option one:** One-click deploy
+## 📧 Contact
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+**Sanidhya Ravi**
+- Email: sanidhya@example.com
+- GitHub: [@sanidhya1910](https://github.com/sanidhya1910)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/sanidhya19)
 
-**Option two:** Manual clone
+---
 
-1. Clone this repo: `git clone https://github.com/netlify-templates/next-netlify-starter.git`
-2. Navigate to the directory and run `npm install`
-3. Run `npm run dev`
-4. Make your changes
-5. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
+⭐ **If you found this portfolio template useful, please consider giving it a star!**
 
-## Testing
+## 🙏 Acknowledgments
 
-### Included Default Testing
-
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
-
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
+- [Next.js](https://nextjs.org/) - React framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [Lucide React](https://lucide.dev/) - Icon library
+- [Inter Font](https://rsms.me/inter/) - Typography
+- [Netlify](https://netlify.com/) - Deployment platform
