@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Code, Coffee, Heart, Zap } from 'lucide-react'
+import { MapPin, Mail, Calendar, Code } from 'lucide-react'
 
 export default function About() {
   const containerVariants = {
@@ -7,25 +7,28 @@ export default function About() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.1
       }
     }
   }
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   }
 
-  const stats = [
-    { icon: Code, label: 'Projects Completed', value: '15+' },
-    { icon: Coffee, label: 'Cups of Coffee', value: '400+' },
-    { icon: Heart, label: 'Happy Clients', value: '10+' },
-    { icon: Zap, label: 'Years Experience', value: '1+' }
+  const skills = [
+    'React & Next.js',
+    'Node.js & Express',
+    'Python & AI/ML',
+    'PostgreSQL & MongoDB',
+    'TypeScript',
+    'Tailwind CSS'
   ]
 
   return (
@@ -39,59 +42,73 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div className="section-header" variants={itemVariants}>
-            <h2 className="section-title">About Me</h2>
-            <p className="section-subtitle">Get to know me better</p>
+            <h2 className="section-title">About</h2>
+            <p className="section-subtitle">Building digital experiences with modern technologies</p>
           </motion.div>
 
           <div className="about-grid">
             <motion.div className="about-text" variants={itemVariants}>
               <div className="text-content">
                 <p>
-                  I'm a passionate Full Stack Developer with a love for creating beautiful, 
-                  functional web experiences. My journey in web development started 1 year ago, 
-                  and I've been constantly learning and evolving ever since.
+                  I'm a passionate Full Stack Developer focused on creating intuitive, 
+                  high-performance web applications. With expertise in React, Next.js, and 
+                  modern web technologies, I bring ideas to life through clean code and 
+                  thoughtful design.
                 </p>
                 <p>
-                  I specialize in React, Next.js, Node.js, and modern web technologies. 
-                  I believe in writing clean, maintainable code and creating user experiences 
-                  that are both intuitive and delightful.
+                  My approach combines technical precision with user-centered thinking, 
+                  ensuring that every project not only functions flawlessly but also 
+                  delivers an exceptional user experience.
                 </p>
                 <p>
-                  When I'm not coding, you can find me tinkering with AI projects and tools, 
-                  contributing to open-source projects, or watching the occasional isekai.
+                  When I'm not coding, I'm exploring AI/ML innovations, contributing to 
+                  open-source projects, and staying current with the latest in web development.
                 </p>
               </div>
 
-              <motion.div className="personal-info">
-                <div className="info-item">
-                  <span className="label">Name:</span>
-                  <span className="value">Sanidhya Ravi</span>
+              <div className="personal-details">
+                <div className="detail-item">
+                  <MapPin size={16} className="detail-icon" />
+                  <span>Mumbai, India</span>
                 </div>
-                <div className="info-item">
-                  <span className="label">Location:</span>
-                  <span className="value">Mumbai, India</span>
+                <div className="detail-item">
+                  <Mail size={16} className="detail-icon" />
+                  <span>ravisanidhya@gmail.com</span>
                 </div>
-                <div className="info-item">
-                  <span className="label">Email:</span>
-                  <span className="value">ravisanidhya@gmail.com</span>
+                <div className="detail-item">
+                  <Calendar size={16} className="detail-icon" />
+                  <span>Available for new opportunities</span>
                 </div>
-                <div className="info-item">
-                  <span className="label">Experience:</span>
-                  <span className="value">1+ Years</span>
+              </div>
+
+              <div className="skills-section">
+                <h4>Key Technologies</h4>
+                <div className="skills-grid">
+                  {skills.map((skill, index) => (
+                    <motion.span
+                      key={skill}
+                      className="skill-tag"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05, duration: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      {skill}
+                    </motion.span>
+                  ))}
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
 
             <motion.div className="about-image" variants={itemVariants}>
               <div className="image-container">
                 <motion.div
                   className="profile-image"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <img 
                     src="/profile.jpg" 
-                    alt="Sanidhya Ravi Profile" 
+                    alt="Sanidhya Ravi" 
                     className="profile-img"
                     onError={(e) => {
                       e.target.style.display = 'none';
@@ -99,46 +116,12 @@ export default function About() {
                     }}
                   />
                   <div className="image-placeholder" style={{ display: 'none' }}>
-                    <Code size={40} />
+                    <Code size={32} />
                   </div>
                 </motion.div>
-                <div className="image-decoration">
-                  <motion.div
-                    className="decoration-shape"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  />
-                </div>
               </div>
             </motion.div>
           </div>
-
-          <motion.div className="stats-grid" variants={itemVariants}>
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="stat-card"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="stat-icon">
-                  <stat.icon size={24} />
-                </div>
-                <div className="stat-content">
-                  <motion.div
-                    className="stat-value"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ delay: index * 0.2, type: "spring" }}
-                    viewport={{ once: true }}
-                  >
-                    {stat.value}
-                  </motion.div>
-                  <div className="stat-label">{stat.label}</div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
     </section>

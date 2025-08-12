@@ -7,17 +7,18 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.1
       }
     }
   }
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   }
 
@@ -27,47 +28,6 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      <div className="hero-bg">
-        <div className="floating-shapes">
-          <motion.div
-            className="shape shape-1"
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 180, 360]
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <motion.div
-            className="shape shape-2"
-            animate={{
-              y: [0, 20, 0],
-              x: [0, 10, 0]
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <motion.div
-            className="shape shape-3"
-            animate={{
-              y: [0, -15, 0],
-              rotate: [0, -180, -360]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        </div>
-      </div>
-
       <motion.div
         className="hero-content"
         variants={containerVariants}
@@ -75,32 +35,36 @@ export default function Hero() {
         animate="visible"
       >
         <motion.div className="hero-text" variants={itemVariants}>
-          <motion.h1 className="hero-title">
-            <span className="greeting">Hi, I'm</span>
-            <span className="name">Sanidhya Ravi</span>
-          </motion.h1>
-
-          <motion.div className="hero-subtitle" variants={itemVariants}>
-            <motion.span
-              className="typing-text"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-            >
-              Full Stack Developer with a Passion for AI
-            </motion.span>
-          </motion.div>
-
-          <motion.p className="hero-description" variants={itemVariants}>
-            I create beautiful, responsive web applications with modern technologies.
-            Passionate about clean code, user experience, and bringing ideas to life.
+          <motion.p 
+            className="hero-label"
+            variants={itemVariants}
+          >
+            Full Stack Developer
           </motion.p>
 
-          <motion.div className="hero-buttons" variants={itemVariants}>
+          <motion.h1 
+            className="hero-title"
+            variants={itemVariants}
+          >
+            Building digital experiences that matter
+          </motion.h1>
+
+          <motion.p 
+            className="hero-description" 
+            variants={itemVariants}
+          >
+            I create modern web applications with clean design and robust functionality. 
+            Passionate about React, Next.js, and innovative user experiences.
+          </motion.p>
+
+          <motion.div 
+            className="hero-buttons" 
+            variants={itemVariants}
+          >
             <motion.button
               className="btn btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.98 }}
               onClick={scrollToAbout}
             >
               View My Work
@@ -108,8 +72,8 @@ export default function Hero() {
             <motion.a
               href="#contact"
               className="btn btn-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.98 }}
               onClick={(e) => {
                 e.preventDefault()
                 document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -119,31 +83,34 @@ export default function Hero() {
             </motion.a>
           </motion.div>
 
-          <motion.div className="social-links" variants={itemVariants}>
+          <motion.div 
+            className="social-links" 
+            variants={itemVariants}
+          >
             <motion.a
               href="https://github.com/sanidhya1910"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              whileHover={{ y: -3 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
             >
-              <Github size={24} />
+              <Github size={20} />
             </motion.a>
             <motion.a
               href="https://linkedin.com/in/sanidhya19"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              whileHover={{ y: -3 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
             >
-              <Linkedin size={24} />
+              <Linkedin size={20} />
             </motion.a>
             <motion.a
               href="mailto:ravisanidhya@gmail.com"
               className="social-link"
-              whileHover={{ y: -3 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
             >
-              <Mail size={24} />
+              <Mail size={20} />
             </motion.a>
           </motion.div>
         </motion.div>
@@ -153,15 +120,15 @@ export default function Hero() {
         className="scroll-indicator"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
+        transition={{ delay: 1.5 }}
       >
         <motion.button
           onClick={scrollToAbout}
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="scroll-btn"
         >
-          <ChevronDown size={24} />
+          <ChevronDown size={20} />
         </motion.button>
       </motion.div>
     </section>

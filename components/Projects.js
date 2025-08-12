@@ -70,17 +70,18 @@ export default function Projects() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.1
       }
     }
   }
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   }
 
@@ -88,8 +89,7 @@ export default function Projects() {
     <motion.div
       className={`project-card ${project.featured ? 'featured' : ''}`}
       variants={itemVariants}
-      whileHover={{ y: -10 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
     >
       <div className="project-image">
         <img 
@@ -102,7 +102,7 @@ export default function Projects() {
           }}
         />
         <div className="image-placeholder" style={{ display: 'none' }}>
-          <Eye size={40} />
+          <Eye size={32} />
         </div>
         <div className="project-overlay">
           <div className="project-links">
@@ -111,20 +111,20 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.95 }}
             >
-              <Github size={20} />
+              <Github size={18} />
             </motion.a>
             <motion.a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.95 }}
             >
-              <ExternalLink size={20} />
+              <ExternalLink size={18} />
             </motion.a>
           </div>
         </div>
@@ -139,9 +139,9 @@ export default function Projects() {
             <motion.span
               key={tech}
               className="tech-tag"
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: techIndex * 0.1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: techIndex * 0.05, duration: 0.3 }}
               viewport={{ once: true }}
             >
               {tech}
@@ -176,12 +176,12 @@ export default function Projects() {
           <motion.div className="projects-cta" variants={itemVariants}>
             <p>Want to see more of my work?</p>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/sanidhya1910"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -2, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.98 }}
             >
               View All Projects
             </motion.a>
